@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Hangman Game</title>
+<link rel="icon" type="image/x-icon" href="D:\HANGMAN KPF\favicon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"/>
+<link rel="stylesheet" href="style.css" />
+<style>
+body {font-family: "Lato", sans-serif}
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+  <a href="D:\HANGMAN KPF\utama.html" class="w3-bar-item w3-button">UTAMA</a>
+</div>
+
+<!-- Page Content -->
+<div class="w3-black">
+  <button class="w3-button w3-black w3-xlarge" onclick="w3_open()">☰</button>
+</div>
+
+<!-- Audio Section -->
+<audio autoplay loop id="myAudio">
+  <source src="D:\HANGMAN KPF\bgmusic.mp3" type="audio/mpeg">
+</audio>
+
+<button class="w3-button w3-large" onclick="toggleAudio()"><i id="audioIcon" class="fa fa-volume-up"></i></button>
+
+<!-- Game Section -->
+<div class="w3-content w3-container w3-padding-64 w3-padding-large w3-white w3-display-middle w3-margin-top" style="max-width:1500px">
+	<div id="name-appear" class="w3-display-topright w3-monospace">
+		<span class="w3-display-topright w3-monospace"></span>
+	</div>
+		<span id="current-player-text" class="w3-monospace w3-text-green"></span>
+		<br>
+		<span id="current-player-timer" class="w3-monospace w3-text-red"></span>
+	<div id="options-container"></div>
+	<div id="question-section">
+		<h2 id="question-text"></h2>
+    </div>
+	<div id="letter-container" class="letter-container hide"></div>
+	<div id="user-input-section"></div>
+      <canvas id="canvas"></canvas>
+	<div id="new-game-container" class="new-game-popup hide">
+		<div id="result-text"></div>
+		<img src="D:\HANGMAN KPF\star.png" style="width:10%; height:10%;"><p id="score-display"></p>
+		<div id="player1-scores">
+			<span>Player 1 Score: </span>
+			<span id="player1-score">0</span>
+		</div>
+		<div id="player2-scores">
+			<span>Player 2 Score: </span>
+			<span id="player2-score">0</span>
+		</div>
+		<br>
+		<button id="new-game-button">PERMAINAN BARU</button>
+	</div>
+</div>	
+
+<!-- Audio Section -->
+<audio id="win-sound">
+	<source src="D:\HANGMAN KPF\celeb.mp3" type="audio/mpeg">
+</audio>
+<audio id="lose-sound">
+	<source src="D:\HANGMAN KPF\wrong.mp3" type="audio/mpeg">
+</audio>
+	
+	
+<!-- Script -->
+<script src="java.js"></script>
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+var audio = document.getElementById("myAudio");
+  var audioIcon = document.getElementById("audioIcon");
+
+  function toggleAudio() {
+    if (audio.paused) {
+      audio.play();
+      audioIcon.className = "fa fa-volume-up";
+    } else {
+      audio.pause();
+      audioIcon.className = "fa fa-volume-off";
+    }
+  }
+
+</script>
+	
+  </body>
+</html>

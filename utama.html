@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Hangman Game</title>
+<link rel="icon" type="image/x-icon" href="D:\HANGMAN KPF\favicon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.gamePic{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">UTAMA</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="NOTA">NOTA <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#note1" class="w3-bar-item w3-button">ISU FALSAFAH PENDIDIKAN</a>
+        <a href="#note2" class="w3-bar-item w3-button">ISU DASAR DAN SISTEM PENDIDIKAN</a>
+        <a href="#note3" class="w3-bar-item w3-button">ISU PENDIDIKAN DAN CABARAN</a>
+      </div>
+    </div>
+	<a href="#game" class="w3-bar-item w3-button w3-padding-large">GAME</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#note1" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">NOTA ISU FALSAFAH PENDIDIKAN</a>
+  <a href="#note2" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">NOTA ISU DASAR DAN SISTEM PENDIDIKAN</a>
+  <a href="#note3" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">NOTA ISU PENDIDIKAN DAN CABARAN</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Main Images -->
+  <div class="w3-display-container w3-center">
+    <img src="D:\HANGMAN KPF\utama.png" style="width:100%">
+  </div>
+
+  <!-- The Note Section -->
+  <div class="w3-row w3-padding-64" id="note1">
+    <div class="w3-col m6 w3-padding-large">
+     <img src="D:\HANGMAN KPF\note1.png" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">Nota:</h1><br>
+      <h3 class="w3-center">ISU FALSAFAH PENDIDIKAN</h3>
+      <p class="w3-large w3-text-grey">Subtopic ini merangkumi Falsafah Pendidikan Kebangsaan (FPK) dan Revolusi Industri Ke-4.</p>
+	  <p class="w3-large w3-text-grey">Revolusi Industri Ke-4 bukanlah sesuatu yang mudah diterima mengambil pandangan FPK. Ia disebabkan asas dan nilai falsafah yang amat berbeza antara kedua-duanya.</p>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <div class="w3-row w3-padding-64 w3-sand" id="note2">
+	<div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">Nota:</h1><br>
+      <h3 class="w3-center">ISU DASAR DAN SISTEM PENDIDIKAN</h3>
+      <p class="w3-large w3-text-grey">Subtopic ini merangkumi ajaran akhlak dan adab , dasar pembangunan mantap dalam membangunkan anak bangsa serta melahirkan insan yang mahir dan penuhi keperluan negara</p>
+    </div>
+	
+    <div class="w3-col m6 w3-padding-large">
+     <img src="D:\HANGMAN KPF\note2.png" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+  </div>
+  
+  <hr>
+  
+  <div class="w3-row w3-padding-64" id="note3">
+    <div class="w3-col m6 w3-padding-large">
+     <img src="D:\HANGMAN KPF\note3.png" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">Nota:</h1><br>
+      <h3 class="w3-center">ISU PENDIDIKAN DAN CABARAN</h3>
+      <p class="w3-large w3-text-grey">Subtopik ini merangkumi cabaran dalam mewujudkan pelajaran berfokuskan peperiksaan dan pencapaian, Pendidikan berterusan, Pendidikan bersepadu, Bahasa penghantar, Sekolah vernakular.</p>
+    </div>
+  </div>
+  
+  <hr>
+
+  <!-- The Game Section -->
+  <div class="w3-container w3-padding-64 w3-padding-large w3-sand w3-center" id="game">
+    <h2 class="w3-wide w3-center">Hangman Game</h2>
+    <p class="w3-opacity w3-center">Cuba nilai pengetahuan mengenai unit 13 melalui permainan ini.</p>
+    <img src="D:\HANGMAN KPF\game.png" alt="Lights" class="gamePic w3-image" width="600" height="400">
+	<hr>
+	<a href="D:\HANGMAN KPF\mulaGame.html" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:10px 70px">Main</a>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+</footer>
+
+<script>
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+</script>
+
+</body>
+</html>
