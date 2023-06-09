@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <title>Hangman Game</title>
-<link rel="icon" type="image/x-icon" href=".\HANGMAN KPF\favicon.png">
+<link rel="icon" type="image/x-icon" href="KPFHangmanGame\favicon.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,7 +20,7 @@ body {font-family: "Lato", sans-serif}
 <!-- Sidebar -->
 <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
   <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-  <a href=".\HANGMAN KPF\utama.html" class="w3-bar-item w3-button">UTAMA</a>
+  <a href="KPFHangmanGame\utama.html" class="w3-bar-item w3-button">UTAMA</a>
 </div>
 
 <!-- Page Content -->
@@ -30,7 +30,7 @@ body {font-family: "Lato", sans-serif}
 
 <!-- Audio Section -->
 <audio autoplay loop id="myAudio">
-  <source src=".\HANGMAN KPF\bgmusic.mp3" type="audio/mpeg">
+  <source src="KPFHangmanGame\bgmusic.mp3" type="audio/mpeg">
 </audio>
 
 <button class="w3-button w3-large" onclick="toggleAudio()"><i id="audioIcon" class="fa fa-volume-up"></i></button>
@@ -52,7 +52,7 @@ body {font-family: "Lato", sans-serif}
       <canvas id="canvas"></canvas>
 	<div id="new-game-container" class="new-game-popup hide">
 		<div id="result-text"></div>
-		<img src=".\HANGMAN KPF\star.png" style="width:10%; height:10%;"><p id="score-display"></p>
+		<img src="KPFHangmanGame\star.png" style="width:10%; height:10%;"><p id="score-display"></p>
 		<div id="player1-scores">
 			<span>Player 1 Score: </span>
 			<span id="player1-score">0</span>
@@ -68,10 +68,10 @@ body {font-family: "Lato", sans-serif}
 
 <!-- Audio Section -->
 <audio id="win-sound">
-	<source src=".\HANGMAN KPF\celeb.mp3" type="audio/mpeg">
+	<source src="KPFHangmanGame\celeb.mp3" type="audio/mpeg">
 </audio>
 <audio id="lose-sound">
-	<source src=".\HANGMAN KPF\wrong.mp3" type="audio/mpeg">
+	<source src="KPFHangmanGame\wrong.mp3" type="audio/mpeg">
 </audio>
 	
 	
